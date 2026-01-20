@@ -8,7 +8,10 @@ body{
     display: inline-block;}
 .mobile {
     display: none;}
-
+.test_b {
+    background: aqua;}
+.test_r {
+    background: red;}
 
 
 
@@ -67,10 +70,15 @@ figcaption {
 .text_wrap {
     text-wrap: wrap;}
 
+.lg_text {
+    letter-spacing: 0.25vw;
+    font-size: calc(72pt + 0.5vw);
+	line-height: 78pt;}
+
 .resume_code {
     padding-left: 3vw;
     text-indent: -3vw;
-    list-style: none;}
+    list-style: none!important;}
 
 .dot {
     color: #83a870;}
@@ -310,8 +318,7 @@ header ul li a {
     cursor: pointer;}
 
 #popup_submit:active {
-    background: #83a870;
-}
+    background: #83a870;}
 
 .close-btn {
     position: absolute;
@@ -338,9 +345,6 @@ a {
     text-decoration: underline;
     color: black;
     padding: 0% 2%;}
-
-a:active {
-    color: white;}
 
 .this {
     padding: 1px;}
@@ -418,6 +422,9 @@ hr {
     margin-top: 0px;
     margin-bottom: auto;}
 
+.text_right {
+    text-align: right;}
+
 .full {
     width: 100%;}
 
@@ -486,6 +493,13 @@ hr {
     justify-content: center;
     align-items: center;}
 
+.me_grid {
+    width: 85vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;}
+
 .logo_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -539,6 +553,10 @@ hr {
 
 
 /*IMAGES*/
+#me {
+    margin: auto 0px;
+    width: 45vw;}
+
 #home_sketch {
     width: 80vw;
     object-fit: contain;
