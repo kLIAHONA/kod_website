@@ -8,10 +8,8 @@ body{
     display: inline-block;}
 .mobile {
     display: none;}
-.test_b {
-    background: aqua;}
-.test_r {
-    background: red;}
+.section_target {
+  scroll-margin-top: 16vh;}
 
 
 
@@ -72,7 +70,7 @@ figcaption {
 
 .lg_text {
     letter-spacing: 0.25vw;
-    font-size: calc(72pt + 0.5vw);
+    font-size: 8vw;
 	line-height: 78pt;}
 
 .resume_code {
@@ -564,9 +562,18 @@ hr {
 
 
 /*IMAGES*/
+.me_box {
+    margin: auto;
+    width: 45vw;
+    height: 45vh;
+    overflow: hidden;}
+
 #me {
+    object-fit: cover;
+    object-position: center;
     margin: auto 0px;
-    width: 45vw;}
+    height: 100%;
+    width: 100%;}
 
 #home_sketch {
     width: 80vw;
@@ -681,7 +688,7 @@ figcaption a:hover {
 .box_hint {
     margin: auto;
     margin-bottom: 1vh;
-    width: 12vw;}
+    width: 17vw;}
 
 
 
@@ -955,6 +962,8 @@ footer {
 	max-width: 100%;}
 
 @media screen and (max-width: 1024px) {
+    .sage_box {
+        width: 50vw;}
     .desktop {
         display: none;}
     .mobile {
@@ -1053,6 +1062,8 @@ footer {
         width: 90vw;}
     .edu {
         width: 90vw;}
+    .sage_box {
+        width: 55vw;}
     .box_gradient {
         width: 13vw;}
     .box_hint {
@@ -1090,6 +1101,8 @@ footer {
         padding: 0.5vh 0.5vw;}
     .script {
         margin-left: -3vw;}
+    .sage_box {
+        width: 63vw;}
     .box_gradient {
         width: 15vw;}
     .ss {
@@ -1135,6 +1148,8 @@ footer {
         width: 75%;}
     .height_50 {
         height: 40vh;}
+    .sage_box {
+        width: 72vw;}
     .box_hint {
         width: 30vw;}
     #home_sketch {
@@ -1154,6 +1169,8 @@ footer {
         max-height: 2vh;
         max-width: 1vw;
         padding: 2px 6px 0px 6px;}
+    .sage_box{
+        width: 80vw;}
     .box_hint {
         width: 35vw;}
     #home_sketch {
