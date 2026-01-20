@@ -25,10 +25,10 @@
 </head>
 <body>
     <div class="top-mar"></div>
-    <nav class="nav_color col-12">
+    <nav class="sage col-12">
         <div>
             <ul class="p navbar">
-                <li class="script"><a class="nav-links" href="index.html">Kaylie Osmun</a></li>
+                <li><a class="nav-links" href="index.html"><img id="ko" src="imgs/ko.png"></a></li>
                 <span class="nav_menu">
                 <li class="nav-btns"><a class="nav-links active" href="index.html">My Portfolio</a></li>
                 <li class="nav-btns"><a class="nav-links" href="about_me.html">About Me</a></li>
@@ -114,11 +114,20 @@
     </script>
     <main class="col-12">
         <section id="welcome">
-            <h2>Welcome to My Portfolio!</h2>
-            <h5>Hello! My name is Kaylie and I have an Associates Degree in Graphic Design. Thanks for coming to  my portfolio!
-                Take a look around and if you like what you see, don't hesitate to <a class="this" href="contact_me.html">reach out!</a></h5>
+            <br><br><br><br>
+            <div class="me_grid">
+                <div class="text_right left">
+                    <h1 class="lg_text top script_font">Kaylie Osmun</h1>
+                    <h5>Graphic Designer<br>Usability Consultant<br>Social Media Manager<br>Content Creator<br>HTML &#38; CSS Coder</h5>
+                </div>
+                <div class="me_box">
+                    <img id="me" class="left" src="imgs/meee.jpg" alt="picture of me">
+                </div>
+            </div>
+            <p class="top right text_right">If you like what you see, don't hesitate to <a class="this" href="contact_me.html">reach out!</a></p>
         </section>
-        <section id="logos">
+        <hr>
+        <section class="section_target" id="logos">
             <div>
             <h2>Logos</h2>
                 <div class="logo_grid">
@@ -132,7 +141,7 @@
             </div>
         </section>
         <hr>
-        <section id="clients">
+        <section class="section_target" id="clients">
             <h2>Work for Clients</h2>
         </section>
         <script>
@@ -207,83 +216,6 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="carousel_content">
-                <div class="row flex">
-                    <div class="col-5 col-left">
-                        <h5 class="client_vs">What my client asked for:</h5>
-                        <ul class="p">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 col-right">
-                        <h5 class="client_vs">What I delivered:</h5>
-                        <img class="carousel_img" src="imgs/#" alt="#">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel_content">
-                <div class="row flex">
-                    <div class="col-5 col-left">
-                        <h5 class="client_vs">What my client asked for:</h5>
-                        <ul class="p">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 col-right">
-                        <h5 class="client_vs">What I delivered:</h5>
-                        <img class="carousel_img" src="imgs/#" alt="#">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel_content">
-                <div class="row flex">
-                    <div class="col-5 col-left">
-                        <h5 class="client_vs">What my client asked for:</h5>
-                        <ul class="p">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 col-right">
-                        <h5 class="client_vs">What I delivered:</h5>
-                        <img class="carousel_img" src="imgs/#" alt="#">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel_content">
-                <div class="row flex">
-                    <div class="col-5 col-left">
-                        <h5 class="client_vs">What my client asked for:</h5>
-                        <ul class="p">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 col-right">
-                        <h5 class="client_vs">What I delivered:</h5>
-                        <img class="carousel_img" src="imgs/#" alt="#">
-                    </div>
-                </div>
-            </div>
--->
             <button class="carousel_btn prev_btn p"><div id="prev_btn"><span id="center">&#60</span></div></button>
             <button class="carousel_btn next_btn p"><div id="next_btn"><span id="center">&#62</span></div></button>
         </div>
@@ -313,7 +245,7 @@
             attachPressListeners(prevButton);
         </script>
         <hr>
-        <section id="code">
+        <section class="section_target" id="code">
             <h2>Code Snippets</h2>
             <h3 class="top">How to make a <span class="button"><a id="indented_btn">button</a></span> look indented when clicked:</h3>
             </br>
@@ -424,7 +356,7 @@
         </div>
         </section>
         <hr>
-        <section id="psd">
+        <section class="section_target" id="psd">
             <h2>Photoshoped Images</h2>
                 <div class="psd_grid">
                     <figure class="center psd-box">
@@ -444,7 +376,7 @@
                 </div>
         </section>
         <hr>
-        <section id="misc">
+        <section class="section_target" id="misc">
             <h2>Videos and Animation</h2>
             <div class="misc_grid">
                 <img class="animations" src="/imgs/animation.gif" alt="Your browser does not support the video tag">
@@ -453,93 +385,94 @@
             </div>
         </section>
         <hr>
-        <section id="process_web">
+        <section class="section_target" id="process_web">
             <h2>My Process for Designing a Website</h2>
-                <h3>Phase 1 &ndash; Sketching</h3>
-                    <div class="row">
-                        <article class="full">
-                            <p class="top pad_l_5 indent">I begin the design process for websites by figuring out how many pages it will need.
-                                For this website I needed three. Next is designing the header, footer, and navigation bar.
-                                After that it's deciding what goes on each page. Then I design each section on the page. I
-                                use an X for images and using corner marks to indicate a border or box. I also make note of what
-                                layout I want to use for each section, such as columns or carousels.
-                            </p>
-                            </br></br>
-                            <p class="pad_l_5 indent">
-                                After I have a layout that I like I flesh out what the text will be and what buttons will look
-                                like and do. Once my client and I are happy with the sketches, we're ready to move onto the next phase!
-                            </p>
-                        </article>
-                        <div class="website-box full blk_border scroll height_50">
-                            <div>
-                                <figure>
-                                    <div class="box_hint">
-                                        <figcaption class="hint"><span class="desktop">hover to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
-                                    </div>
-                                    <img id="home_sketch" class="full" src="imgs/home_sketch.jpg" alt="sketched ideas for a website's homepage layout">
-                                </figure>
+            <h3 class="sage_box">Phase 1 &ndash; Sketching</h3>
+            <div class="row">
+                <article class="full">
+                    <p class="top pad_l_5 indent">I begin the design process for websites by figuring out how many pages it will need.
+                        For this website I needed three. Next is designing the header, footer, and navigation bar.
+                        After that it's deciding what goes on each page. Then I design each section on the page. I
+                        use an X for images and using corner marks to indicate a border or box. I also make note of what
+                        layout I want to use for each section, such as columns or carousels.
+                    </p>
+                    </br></br>
+                    <p class="pad_l_5 indent">
+                        After I have a layout that I like I flesh out what the text will be and what buttons will look
+                        like and do. Once my client and I are happy with the sketches, we're ready to move onto the next phase!
+                    </p>
+                </article>
+                <div class="website-box full blk_border scroll height_50">
+                    <div>
+                        <figure>
+                            <div class="box_hint">
+                                <figcaption class="hint"><span class="desktop">hover over image to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
                             </div>
-                        </div>                        
+                            <img id="home_sketch" class="full" src="imgs/home_sketch.jpg" alt="sketched ideas for a website's homepage layout">
+                        </figure>
                     </div>
-                <h3>Phase 2 &ndash; Rough Draft</h3>
-                    <div class="row process_grid">
-                        <div class="website-box ss blk_border scroll">
-                            <div>
-                                <figure>
-                                    <div class="box_hint">
-                                        <figcaption class="hint"><span class="desktop">hover to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
-                                    </div>
-                                    <img id="rough_ss" src="imgs/rough_ss.jpg" alt="rough draft of a website's homepage layout">
-                                </figure>
+                </div>                        
+            </div>
+            <br>
+            <h3 class="sage_box">Phase 2 &ndash; Rough Draft</h3>
+            <div class="row process_grid">
+                <div class="website-box ss blk_border scroll">
+                    <div>
+                        <figure>
+                            <div class="box_hint">
+                                <figcaption class="hint"><span class="desktop">hover over image to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
                             </div>
-                        </div>
-                        <div class="ss_text">
-                            <article>
-                                <p class="top pad_l_5 indent"> I use my details from my sketch to begin making the outlines of the website. I make the header, footer, and
-                                    navigation bar and make the buttons link to their respective HTML files. I also link a CSS file to all the pages. This has
-                                    my standard codes for coloumns, font sizes that change respective to the size of the browser, as well as codes needed for
-                                    everything else I put on my website. I like to have one big CSS file for the whole website rather than a separate CSS file for
-                                    each HTML page, I think it makes coding easier since I know exactly where everything is.
-                                </p>
-                                </br></br>
-                                <p class="pad_l_5 indent">I insert images as I go so I know what sizes they are. I work section by section to complete each page making sure to add in SEO
-                                    as I go. By the end of this phase I have a website with images, layouts, and working buttons&#8212;but no colors. Now it's
-                                    time to show my clients the rough draft and make any desired changes.
-                                </p>
-                            </article>
-                        </div>
+                            <img id="rough_ss" src="imgs/rough_ss.jpg" alt="rough draft of a website's homepage layout">
+                        </figure>
                     </div>
-                <h3>Phase 3 &ndash; Development</h3>
-                    <div class="row process_grid">
-                        <div class="ss_text">
-                            <article>
-                                <p class="top pad_l_5 indent"> Now that I have a functional website, it's time to add colors, fonts, and the more complex codes such as pop-up
-                                    windows and scrolling image frames. I work closely with my client's want-list to the find colors and fonts that match their
-                                    brand identity. I also refine the layouts and make it responsive so it works on all browser sizes. By the end of this phase I have the
-                                    completed website and it is ready to show to my clients!
-                                </p>
-                            </article>
-                        </div>
-                        <div class="website-box ss blk_border scroll height_50">
-                            <div>
-                                <figure>
-                                    <div class="box_hint">
-                                        <figcaption class="hint"><span class="desktop">hover to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
-                                    </div>
-                                    <img id="develop_ss" src="imgs/development_ss.jpg" alt="finished product of a website's homepage">
-                                </figure>
+                </div>
+                <div class="ss_text">
+                    <article>
+                        <p class="top pad_l_5 indent"> I use my details from my sketch to begin making the outlines of the website. I make the header, footer, and
+                            navigation bar and make the buttons link to their respective HTML files. I also link a CSS file to all the pages. This has
+                            my standard codes for coloumns, font sizes that change respective to the size of the browser, as well as codes needed for
+                            everything else I put on my website. I like to have one big CSS file for the whole website rather than a separate CSS file for
+                            each HTML page, I think it makes coding easier since I know exactly where everything is.
+                        </p>
+                        </br></br>
+                        <p class="pad_l_5 indent">I insert images as I go so I know what sizes they are. I work section by section to complete each page making sure to add in SEO
+                            as I go. By the end of this phase I have a website with images, layouts, and working buttons&#8212;but no colors. Now it's
+                            time to show my clients the rough draft and make any desired changes.
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <h3 class="sage_box">Phase 3 &ndash; Development</h3>
+            <div class="row process_grid">
+                <div class="ss_text">
+                    <article>
+                        <p class="top pad_l_5 indent"> Now that I have a functional website, it's time to add colors, fonts, and the more complex codes such as pop-up
+                            windows and scrolling image frames. I work closely with my client's want-list to the find colors and fonts that match their
+                            brand identity. I also refine the layouts and make it responsive so it works on all browser sizes. By the end of this phase I have the
+                            completed website and it is ready to show to my clients!
+                        </p>
+                    </article>
+                </div>
+                <div class="website-box ss blk_border scroll height_50">
+                    <div>
+                        <figure>
+                            <div class="box_hint">
+                                <figcaption class="hint"><span class="desktop">hover over image to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
                             </div>
-                        </div>
+                            <img id="develop_ss" src="imgs/development_ss.jpg" alt="finished product of a website's homepage">
+                        </figure>
                     </div>
-                <h3>Phase 4 &ndash; Delivery</h3>
-                    <div class="row">
-                        <article>
-                            <p class="top pad_l_5 indent"> Now it's time to upload the website and set up the site analytics. I moniter the site to make sure everything is
-                                working properly and to make any necessary changes needed. Depending on the services in each specific contract I may also update the website
-                                periodically with new content, such as blog posts and seasonal changes.
-                            </p>
-                        </article>
-                    </div>
+                </div>
+            </div>
+            <h3 class="sage_box">Phase 4 &ndash; Delivery</h3>
+            <div class="row">
+                <article>
+                    <p class="top pad_l_5 indent"> Now it's time to upload the website and set up the site analytics. I moniter the site to make sure everything is
+                        working properly and to make any necessary changes needed. Depending on the services in each specific contract I may also update the website
+                        periodically with new content, such as blog posts and seasonal changes.
+                    </p>
+                </article>
+            </div>
         </section>
     </main>
     <br><br>

@@ -8,7 +8,8 @@ body{
     display: inline-block;}
 .mobile {
     display: none;}
-
+.section_target {
+  scroll-margin-top: 16vh;}
 
 
 
@@ -67,10 +68,15 @@ figcaption {
 .text_wrap {
     text-wrap: wrap;}
 
+.lg_text {
+    letter-spacing: 0.25vw;
+    font-size: 8vw;
+	line-height: 78pt;}
+
 .resume_code {
     padding-left: 3vw;
     text-indent: -3vw;
-    list-style: none;}
+    list-style: none!important;}
 
 .dot {
     color: #83a870;}
@@ -86,7 +92,7 @@ pre code ul {
 .script_font {
     font-family: "dream-big-wide", sans-serif;}
 
-.nav_color {
+.sage {
     background: #badf9d;}
 
 .black {
@@ -155,6 +161,10 @@ nav ul {
 
 .mobile_navbar {
     display: none;}
+
+#ko {
+    margin-top: -1vh;
+    height: 6vh;}
 
 .script {
     margin-left: 3vw;
@@ -310,8 +320,7 @@ header ul li a {
     cursor: pointer;}
 
 #popup_submit:active {
-    background: #83a870;
-}
+    background: #83a870;}
 
 .close-btn {
     position: absolute;
@@ -338,9 +347,6 @@ a {
     text-decoration: underline;
     color: black;
     padding: 0% 2%;}
-
-a:active {
-    color: white;}
 
 .this {
     padding: 1px;}
@@ -389,9 +395,16 @@ section {
     margin: auto;
     width: 90vw;}
 
+.sage_box {
+    background: #badf9d;
+    width: 35vw;
+    padding: 2vh 1vw;
+    margin: 1vh 0vw;
+    border-radius: 15px;}
+
 hr {
     background: #badf9d;
-    height: 0.5vh;
+    height: 0.75vh;
     border-top: 0.25vh solid #83a870;
     border-bottom: 0.25vh solid #83a870;
     padding: 0px;
@@ -417,6 +430,9 @@ hr {
 .top {
     margin-top: 0px;
     margin-bottom: auto;}
+
+.text_right {
+    text-align: right;}
 
 .full {
     width: 100%;}
@@ -486,6 +502,13 @@ hr {
     justify-content: center;
     align-items: center;}
 
+.me_grid {
+    width: 85vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;}
+
 .logo_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -539,6 +562,19 @@ hr {
 
 
 /*IMAGES*/
+.me_box {
+    margin: auto;
+    width: 45vw;
+    height: 45vh;
+    overflow: hidden;}
+
+#me {
+    object-fit: cover;
+    object-position: center;
+    margin: auto 0px;
+    height: 100%;
+    width: 100%;}
+
 #home_sketch {
     width: 80vw;
     object-fit: contain;
@@ -652,7 +688,7 @@ figcaption a:hover {
 .box_hint {
     margin: auto;
     margin-bottom: 1vh;
-    width: 12vw;}
+    width: 17vw;}
 
 
 
@@ -926,6 +962,8 @@ footer {
 	max-width: 100%;}
 
 @media screen and (max-width: 1024px) {
+    .sage_box {
+        width: 50vw;}
     .desktop {
         display: none;}
     .mobile {
@@ -1024,6 +1062,8 @@ footer {
         width: 90vw;}
     .edu {
         width: 90vw;}
+    .sage_box {
+        width: 55vw;}
     .box_gradient {
         width: 13vw;}
     .box_hint {
@@ -1061,6 +1101,8 @@ footer {
         padding: 0.5vh 0.5vw;}
     .script {
         margin-left: -3vw;}
+    .sage_box {
+        width: 63vw;}
     .box_gradient {
         width: 15vw;}
     .ss {
@@ -1106,6 +1148,8 @@ footer {
         width: 75%;}
     .height_50 {
         height: 40vh;}
+    .sage_box {
+        width: 72vw;}
     .box_hint {
         width: 30vw;}
     #home_sketch {
@@ -1125,6 +1169,8 @@ footer {
         max-height: 2vh;
         max-width: 1vw;
         padding: 2px 6px 0px 6px;}
+    .sage_box{
+        width: 80vw;}
     .box_hint {
         width: 35vw;}
     #home_sketch {
