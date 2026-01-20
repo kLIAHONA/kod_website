@@ -94,7 +94,7 @@ pre code ul {
 .script_font {
     font-family: "dream-big-wide", sans-serif;}
 
-.nav_color {
+.sage {
     background: #badf9d;}
 
 .black {
@@ -163,6 +163,10 @@ nav ul {
 
 .mobile_navbar {
     display: none;}
+
+#ko {
+    margin-top: -1vh;
+    height: 6vh;}
 
 .script {
     margin-left: 3vw;
@@ -393,9 +397,16 @@ section {
     margin: auto;
     width: 90vw;}
 
+.sage_box {
+    background: #badf9d;
+    width: 35vw;
+    padding: 2vh 1vw;
+    margin: 1vh 0vw;
+    border-radius: 15px;}
+
 hr {
     background: #badf9d;
-    height: 0.5vh;
+    height: 0.75vh;
     border-top: 0.25vh solid #83a870;
     border-bottom: 0.25vh solid #83a870;
     padding: 0px;
