@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaylie Osmun - home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ank0bzv.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var imgBox = document.querySelectorAll('#home_sketch, #rough_ss, #develop_ss');
+            for (let i = 0; i < imgBox.length; i++) {
+                imgBox[i].addEventListener('mouseenter', function(hover) {
+                    var imgHeight = this.scrollHeight;
+                    var scrollheight = imgHeight - 300;
+                    hover.target.style.objectPosition = `0px -${scrollheight}px`;
+                });
+
+                imgBox[i].addEventListener('mouseleave', function(hover) {
+                    hover.target.style.objectPosition = '0px 0px';
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="top-mar"></div>
+    <nav class="nav_color col-12">
+        <div>
+            <ul class="p navbar">
+                <li class="script"><a class="nav-links" href="index.html">Kaylie Osmun</a></li>
+                <span class="nav_menu">
+                <li class="nav-btns"><a class="nav-links active" href="index.html">My Portfolio</a></li>
+                <li class="nav-btns"><a class="nav-links" href="about_me.html">About Me</a></li>
+                <li class="nav-btns"><a class="nav-links" href="contact_me.html">Contact Me</a></li>
+                </span>
+                <div class="mobile_navbar">
+                    <a href="#" id="menu_btn">☰</a>
+                </div>
+                <div id="mobile_menu" class="menu h4">
+                    <li class="nav-btns"><a class="nav-links active" href="index.html">My Portfolio</a></li>
+                    <li class="nav-btns"><a class="nav-links" href="about_me.html">About Me</a></li>
+                    <li class="nav-btns"><a class="nav-links" href="contact_me.html">Contact Me</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <!--SCRIPT FOR POP UP MENU--><script>
+        const menuBtn = document.getElementById("menu_btn");
+        const mobileMenu = document.getElementById("mobile_menu");
+
+        menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("open");
+        });
+
+        document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target)) {
+            mobileMenu.classList.remove("open");
+        }
+        });
+    </script>
+    <header class="black">
+        <ul class="h6">
+            <li><a href="#logos">Logos</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#code">Code</a></li>
+            <li><a href="#psd">Photoshop</a></li>
+            <li><a href="#misc">Videos</a></li>
+            <li><a href="#process_web">My Process</a></li>
+        </ul>
+    </header>
+    <div class="hirebtn h6">
+        <a href="#hireme" id="hiremebtn">Hire Me</a>
+    </div>
+    <div id="popupform" class="popup">
+        <span class="close-btn" id="closepopup">&times;</span>
+        <div class="popup-content">
+            <h3>Want to Hire Me?</h3>
+            <form class="h6">
+                <label for="name">Name:<span class="red">*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="company">Company:<span class="red">*</span></label>
+                <input type="text" id="company" name="company" required>
+
+                <label for="position">Position in Company</label>
+                <input type="text" id="position" name="position">
+
+                <label for="email">Email:<span class="red">*</span></label>
+                <input type="email" id="user_email" name="user_email" required>
+
+                <label for="message">Message:<span class="red">*</span></label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="center" id="popup_submit">Submit</button>
+            </form>
+        </div>
+    </div>
+<!--SCRIPT FOR POP UP FORM--><script>
+        document.getElementById('hiremebtn').addEventListener('click', function() {
+            document.getElementById('popupform').style.display = 'block';
+        });
+        document.getElementById('closepopup').addEventListener('click', function() {
+            document.getElementById('popupform').style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(event) {
+            const popup = document.getElementById('popupform');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
+    <main class="col-12">
+        <section id="welcome">
+            <h2>Welcome to My Portfolio!</h2>
+            <h5>Hello! My name is Kaylie and I have an Associates Degree in Graphic Design. Thanks for coming to  my portfolio!
+                Take a look around and if you like what you see, don't hesitate to <a class="this" href="contact_me.html">reach out!</a></h5>
+        </section>
+        <section id="logos">
+            <div>
+            <h2>Logos</h2>
+                <div class="logo_grid">
+                    <img class="logo_img" src="imgs/fruitastic.png" alt="logo for a fruit juice company called Fruitastic">
+                    <img class="logo_img" src="imgs/JEC_LOGO.png" alt="logo for Juli Edmunds coaching">
+                    <img class="logo_img" src="imgs/Pages_in_Time_KO.png" alt="logo for a bookstore called Pages in Time">
+                    <img class="logo_img" src="imgs/Phoenix_Advertising_Logo.png" alt="logo for a company called Phoenix Advertising">
+                </div>
+                <div class="col-12 row">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="clients">
+            <h2>Work for Clients</h2>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.carousel').forEach(carousel => {
+                    const items = carousel.querySelectorAll('.carousel_content');
+                    if (!items || items.length === 0) return;
+
+                    const buttonsHtml = Array.from(items, () => '<button type="button" class="carousel_button" aria-label="carousel control"></button>');
+
+                    carousel.insertAdjacentHTML('beforeend', `
+                        <div class="carousel_nav">
+                            ${buttonsHtml.join('')}
+                        </div>
+                    `);
+
+                    const buttons = carousel.querySelectorAll('.carousel_button');
+                    if (!buttons || buttons.length === 0) return;
+                    let currentIndex = 0;
+
+                    const setActive = (index) => {
+                        const i = ((index % items.length) + items.length) % items.length;
+                        items.forEach(item => item.classList.remove('carousel_content-active'));
+                        buttons.forEach(btn => btn.classList.remove('carousel_button-active'));
+                        items[i].classList.add('carousel_content-active');
+                        buttons[i].classList.add('carousel_button-active');
+                        currentIndex = i;
+                    };
+
+                    buttons.forEach((button, i) => {
+                        button.addEventListener('click', () => setActive(i));
+                    });
+
+                    const prevBtn = carousel.querySelector('.prev_btn');
+                    const nextBtn = carousel.querySelector('.next_btn');
+                    if (prevBtn) prevBtn.addEventListener('click', () => setActive(currentIndex - 1));
+                    if (nextBtn) nextBtn.addEventListener('click', () => setActive(currentIndex + 1));
+
+                    setActive(0);
+                });
+            });
+        </script>
+        <div class="carousel">
+            <div class="carousel_content">
+                <div class="row flex">
+                    <h5 class="client_vs">What my client asked for:</h5>
+                    <div class="col-top">
+                        <ul class="p client_text">
+                            <li>Simple</li>
+                            <li>Have her name be the main focus</li>
+                            <li>Two different fonts</li>
+                        </ul>
+                    </div>
+                    <h5 class="client_vs">What I delivered:</h5>
+                    <div class="col-bottom">
+                        <img class="carousel_img" src="imgs/JEC_LOGO.png" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel_content">
+                <div class="row flex">
+                    <h5 class="client_vs">What my client asked for:</h5>
+                    <div class="col-top">
+                        <ul class="p client_text">
+                            <li>Cowboy themed gender reveal</li>
+                            <li>Include cowboy boots</li>
+                        </ul>
+                    </div>
+                    <h5 class="client_vs">What I delivered:</h5>
+                    <div class="col-bottom">
+                        <img class="carousel_img" src="imgs/gender_reveal.jpg" alt="#">
+                    </div>
+                </div>
+            </div>
+<!--            <div class="carousel_content">
+                <div class="row flex">
+                    <div class="col-5 col-left">
+                        <h5 class="client_vs">What my client asked for:</h5>
+                        <ul class="p">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-5 col-right">
+                        <h5 class="client_vs">What I delivered:</h5>
+                        <img class="carousel_img" src="imgs/#" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel_content">
+                <div class="row flex">
+                    <div class="col-5 col-left">
+                        <h5 class="client_vs">What my client asked for:</h5>
+                        <ul class="p">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-5 col-right">
+                        <h5 class="client_vs">What I delivered:</h5>
+                        <img class="carousel_img" src="imgs/#" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel_content">
+                <div class="row flex">
+                    <div class="col-5 col-left">
+                        <h5 class="client_vs">What my client asked for:</h5>
+                        <ul class="p">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-5 col-right">
+                        <h5 class="client_vs">What I delivered:</h5>
+                        <img class="carousel_img" src="imgs/#" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel_content">
+                <div class="row flex">
+                    <div class="col-5 col-left">
+                        <h5 class="client_vs">What my client asked for:</h5>
+                        <ul class="p">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-5 col-right">
+                        <h5 class="client_vs">What I delivered:</h5>
+                        <img class="carousel_img" src="imgs/#" alt="#">
+                    </div>
+                </div>
+            </div>
+-->
+            <button class="carousel_btn prev_btn p"><div id="prev_btn"><span id="center">&#60</span></div></button>
+            <button class="carousel_btn next_btn p"><div id="next_btn"><span id="center">&#62</span></div></button>
+        </div>
+        <script>
+            const nextImg = document.getElementById('next_btn');
+            const prevImg = document.getElementById('prev_btn');
+            
+            const nextButton = nextImg ? nextImg.closest('.carousel_btn') || nextImg.parentElement : null;
+            const prevButton = prevImg ? prevImg.closest('.carousel_btn') || prevImg.parentElement : null;
+            
+            function addPressed(el) { if (el) el.classList.add('pressed'); }
+            function removePressed(el) { if (el) el.classList.remove('pressed'); }
+            
+            function attachPressListeners(el) {
+                if (!el) return;
+                
+                el.addEventListener('pointerdown', () => addPressed(el));
+                el.addEventListener('pointerup', () => removePressed(el));
+                el.addEventListener('pointercancel', () => removePressed(el));
+                el.addEventListener('pointerleave', () => removePressed(el));
+                
+                el.addEventListener('touchstart', () => addPressed(el), {passive: true});
+                el.addEventListener('touchend', () => removePressed(el));
+            }
+            
+            attachPressListeners(nextButton);
+            attachPressListeners(prevButton);
+        </script>
+        <hr>
+        <section id="code">
+            <h2>Code Snippets</h2>
+            <h3 class="top">How to make a <span class="button"><a id="indented_btn">button</a></span> look indented when clicked:</h3>
+            </br>
+            <div class="box two_code_grid">
+                <div class="white_box flex_center center">
+                    <div class="little_ltgrey_box">
+                        <h6 class="title">HTML Code</h6>
+<pre><code>
+<span class="maroon">&lt;div</span> <span class="red">class</span>=<span class="blue">"button"</span><span class="maroon">&gt;</span>
+ <span class="maroon">&lt;a</span> <span class="red">href</span>=<span class="blue">"#"</span> <span class="red">id</span>=<span class="blue">"indented_btn"</span><span class="maroon">&gt;</span>Button Text<span class="maroon">&lt;/a&gt;</span>
+<span class="maroon">&lt;/div&gt;</span>
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="white_box flex_center center">
+                        <div class="ltgrey_box">
+                            <h6 class="title">CSS Code</h6>
+<pre><code>
+<span class="maroon">.button a</span> <span class="blue">{</span>
+    <span class="red">position</span>: <span class="blue">relative</span>;
+    <span class="red">text-decoration</span>: <span class="blue">none</span>;
+    <span class="red">background-color</span>: <span class="blue">white</span>;
+    <span class="red">color</span>: <span class="blue">black</span>;
+    <span class="red">padding</span>: <span class="green">5px 8px 4px 8px</span>;
+    <span class="red">border-radius</span>: <span class="green">5px</span>;
+    <span class="red">box-shadow</span>: <span class="green">2px 4px 8px 2px</span> <span class="blue">black</span>;<span class="blue">}</span>
+
+<span class="maroon">.button a:hover</span> <span class="blue">{</span>
+    <span class="red">text-decoration</span>: <span class="blue">underline</span>;
+    <span class="red">cursor</span>: <span class="blue">pointer</span>;<span class="blue">}</span>
+
+<span class="maroon">.button a:active</span> <span class="blue">{</span>
+    <span class="red">transform</span>: <span class="gold">translate</span><span class="green">(5px</span>, <span class="green">2px)</span>;
+    <span class="red">box-shadow</span>: <span class="blue">inset</span> <span class="green">2px 2px 4px 2px</span> <span class="blue">black</span>;<span class="blue">}</span>
+</code></pre>
+                </div>
+            </div>
+        </div>
+        </br></br>
+        <h3 class="top">How to add a <span class="gradient">gradient</span> effect to text:</h3>
+        </br>
+        <div class="box four_code_grid">
+            <div class="white_box flex_center center">
+                <div class="ltgrey_box">
+                    <h6 class="title">HTML Code</h6>
+<pre><code>
+<span class="maroon">&lt;p&gt;</span>
+    Lorem ipsum <span class="maroon">&lt;span</span> <span class="red">class</span>=<span class="blue">"gradient"</span><span class="maroon">&gt;</span>gradient text<span class="maroon">&lt;/span&gt;</span> dolor sit amet, consectetur adipiscing elit
+<span class="maroon">&lt;/p&gt;</span>
+</code></pre>
+                </div>
+            </div>
+            <div class="white_box flex_center center">
+                <div class="ltgrey_box">
+                    <h6 class="title">CSS Code</h6>
+<pre><code>
+<span class="maroon">.gradient</span> <span class="blue">{</span>
+    <span class="red">background</span>: <span class="gold">linear-gradient</span><span class="green">(</span><span class="blue">to top right</span>, <span class="blue">black</span>, <span class="blue">aqua</span><span class="green">)</span>;
+    <span class="red">-webkit-background-clip</span>: <span class="blue">text</span>;
+    <span class="red">background-clip</span>: <span class="blue">text</span>;
+    <span class="red">-webkit-text-fill-color</span>: <span class="blue">transparent</span>;
+    <span class="red">color</span>: <span class="blue">transparent</span>;
+    <span class="red">background-size</span>: <span class="green">300%</span>;
+    <span class="red">animation</span>: gradientText <span class="green">3s</span> <span class="blue">alternate-reverse loop</span>;<span class="blue">}</span>
+<span class="magenta">@keyframes</span> <span class="red">gradientText</span> <span class="blue">{</span>
+    from <span class="green">{</span>
+        <span class="red">background-position</span>: <span class="green">0%</span>;<span class="green">}</span>
+    to <span class="green">{</span>
+        <span class="red">background-position</span>: <span class="green">100%</span>;<span class="green">}</span><span class="blue">}</span>
+</code></pre>
+                </div>
+            </div>
+            <div class="white_box flex_center center">
+                <div class="ltgrey_box">
+                    <h6 class="title">Copy this CSS</h6>
+<pre><code>
+<span class="maroon">.gradient</span> <span class="blue">{</span>
+    <span class="red">background</span>: <span class="gold">linear-gradient</span><span class="green">(</span><span class="blue b caps">/*direction*/</span>, <span class="blue b caps">/*color1*/</span>, <span class="blue b caps">/*color2*/</span><span class="green">)</span>;
+    <span class="red">-webkit-background-clip</span>: <span class="blue">text</span>;
+    <span class="red">background-clip</span>: <span class="blue">text</span>;
+    <span class="red">-webkit-text-fill-color</span>: <span class="blue">transparent</span>;
+    <span class="red">color</span>: <span class="blue">transparent</span>;
+    <span class="red">background-size</span>: <span class="green">300%</span>;
+    <span class="red">animation</span>: gradientText <span class="green b caps">/*time*/</span> <span class="blue b caps">/*loop type*/ /*loop duration*/</span>;<span class="blue b caps">}</span>
+<span class="magenta">@keyframes</span> <span class="red">gradientText</span> <span class="blue">{</span>
+    from <span class="green">{</span>
+        <span class="red">background-position</span>: <span class="green">0%</span>;<span class="green">}</span>
+    to <span class="green">{</span>
+        <span class="red">background-position</span>: <span class="green">100%</span>;<span class="green">}</span><span class="blue">}</span>
+</code></pre>
+                </div>
+            </div>
+            <div class="white_box flex_center center">
+                <div class="ltgrey_box">
+                    <h6 class="title">Customization:</h6>
+<pre><code>
+<ul>
+<li>replace <span class="blue b caps">/*direction*/</span> with to right, to left, to top, to bottom, to top right, to bottom left, etc.</li>
+<li>replace <span class="blue b caps">/*color1*/</span> and <span class="blue b caps">/*color2*/</span> with any color name or hex code
+    <span class="highlight">note: you can add more than two color stops!</span></li>
+<li>replace <span class="green b caps">/*time*/</span> with time in seconds or milliseconds</li>
+<li>replace <span class="blue b caps">/*loop type*/</span> with ease, linear, ease-in, ease-out, ease-in-out, alternate, alternate-reverse </li>
+<li>replace <span class="blue b caps">/*loop duration*/</span> with infinite or a number of times to loop</li>
+</ul>
+</code></pre>
+                </div>
+            </div>
+        </div>
+        </section>
+        <hr>
+        <section id="psd">
+            <h2>Photoshoped Images</h2>
+                <div class="psd_grid">
+                    <figure class="center psd-box">
+                        <img class="img" src="imgs/hot.air.balloon.jpg" alt="#">
+                        <figcaption>Photo by: Roman Odinstov at <a class="out_link" href="https://www.pexels.com/photo/hot-air-balloon-flying-over-the-city-during-sunset-5319707/">https://www.pexels.com/photo/hot-air-balloon-flying-over-the-city-during-sunset-5319707/</a></figcaption>
+                    </figure>
+                    <figure class="center psd-box">
+                        <img class="img" src="imgs/image_2.jpg" alt="#">
+                    </figure>
+                    <figure class="center psd-box">
+                        <img class="img" src="imgs/NY_BEFORE_PHOTO_3_KO.jpg" alt="#">
+                        <figcaption>Photo by: iVes Winzy at <a class="out_link" href="https://www.pexels.com/photo/facade-of-st-patricks-cathedral-and-skyscrapers-in-new-york-usa-23956808/">https://www.pexels.com/photo/facade-of-st-patricks-cathedral-and-skyscrapers-in-new-york-usa-23956808/</a></figcaption>
+                    </figure>
+                    <figure class="center psd-box">
+                        <img class="img" src="imgs/image_1.jpg" alt="#">
+                    </figure>
+                </div>
+        </section>
+        <hr>
+        <section id="misc">
+            <h2>Videos and Animation</h2>
+            <div class="misc_grid">
+                <img class="animations" src="/imgs/animation.gif" alt="Your browser does not support the video tag">
+                <img class="animations" src="/imgs/walk.gif" alt="Your browser does not support the video tag">
+                <img class="animations" src="/imgs/fall.gif" alt="Your browser does not support the video tag">
+            </div>
+        </section>
+        <hr>
+        <section id="process_web">
+            <h2>My Process for Designing a Website</h2>
+                <h3>Phase 1 &ndash; Sketching</h3>
+                    <div class="row">
+                        <article class="full">
+                            <p class="top pad_l_5 indent">I begin the design process for websites by figuring out how many pages it will need.
+                                For this website I needed three. Next is designing the header, footer, and navigation bar.
+                                After that it's deciding what goes on each page. Then I design each section on the page. I
+                                use an X for images and using corner marks to indicate a border or box. I also make note of what
+                                layout I want to use for each section, such as columns or carousels.
+                            </p>
+                            </br></br>
+                            <p class="pad_l_5 indent">
+                                After I have a layout that I like I flesh out what the text will be and what buttons will look
+                                like and do. Once my client and I are happy with the sketches, we're ready to move onto the next phase!
+                            </p>
+                        </article>
+                        <div class="website-box full blk_border scroll height_50">
+                            <div>
+                                <figure>
+                                    <div class="box_hint">
+                                        <figcaption class="hint"><span class="desktop">hover to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
+                                    </div>
+                                    <img id="home_sketch" class="full" src="imgs/home_sketch.jpg" alt="sketched ideas for a website's homepage layout">
+                                </figure>
+                            </div>
+                        </div>                        
+                    </div>
+                <h3>Phase 2 &ndash; Rough Draft</h3>
+                    <div class="row process_grid">
+                        <div class="website-box ss blk_border scroll">
+                            <div>
+                                <figure>
+                                    <div class="box_hint">
+                                        <figcaption class="hint"><span class="desktop">hover to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
+                                    </div>
+                                    <img id="rough_ss" src="imgs/rough_ss.jpg" alt="rough draft of a website's homepage layout">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="ss_text">
+                            <article>
+                                <p class="top pad_l_5 indent"> I use my details from my sketch to begin making the outlines of the website. I make the header, footer, and
+                                    navigation bar and make the buttons link to their respective HTML files. I also link a CSS file to all the pages. This has
+                                    my standard codes for coloumns, font sizes that change respective to the size of the browser, as well as codes needed for
+                                    everything else I put on my website. I like to have one big CSS file for the whole website rather than a separate CSS file for
+                                    each HTML page, I think it makes coding easier since I know exactly where everything is.
+                                </p>
+                                </br></br>
+                                <p class="pad_l_5 indent">I insert images as I go so I know what sizes they are. I work section by section to complete each page making sure to add in SEO
+                                    as I go. By the end of this phase I have a website with images, layouts, and working buttons&#8212;but no colors. Now it's
+                                    time to show my clients the rough draft and make any desired changes.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                <h3>Phase 3 &ndash; Development</h3>
+                    <div class="row process_grid">
+                        <div class="ss_text">
+                            <article>
+                                <p class="top pad_l_5 indent"> Now that I have a functional website, it's time to add colors, fonts, and the more complex codes such as pop-up
+                                    windows and scrolling image frames. I work closely with my client's want-list to the find colors and fonts that match their
+                                    brand identity. I also refine the layouts and make it responsive so it works on all browser sizes. By the end of this phase I have the
+                                    completed website and it is ready to show to my clients!
+                                </p>
+                            </article>
+                        </div>
+                        <div class="website-box ss blk_border scroll height_50">
+                            <div>
+                                <figure>
+                                    <div class="box_hint">
+                                        <figcaption class="hint"><span class="desktop">hover to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
+                                    </div>
+                                    <img id="develop_ss" src="imgs/development_ss.jpg" alt="finished product of a website's homepage">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                <h3>Phase 4 &ndash; Delivery</h3>
+                    <div class="row">
+                        <article>
+                            <p class="top pad_l_5 indent"> Now it's time to upload the website and set up the site analytics. I moniter the site to make sure everything is
+                                working properly and to make any necessary changes needed. Depending on the services in each specific contract I may also update the website
+                                periodically with new content, such as blog posts and seasonal changes.
+                            </p>
+                        </article>
+                    </div>
+        </section>
+    </main>
+    <br><br>
+    <hr>
+    <footer class="row col-12 text_wrap">
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+    </footer>
+</body>
+</html>

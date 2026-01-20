@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaylie Osmun - contact me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ank0bzv.css">
+</head>
+<body>
+    <div class="top-mar"></div>
+    <nav class="nav_color col-12">
+        <div>
+            <ul class="p navbar">
+                <li class="script"><a class="nav-links" href="index.html">Kaylie Osmun</a></li>
+                <span class="nav_menu">
+                <li class="nav-btns"><a class="nav-links" href="index.html">My Portfolio</a></li>
+                <li class="nav-btns"><a class="nav-links" href="about_me.html">About Me</a></li>
+                <li class="nav-btns"><a class="nav-links active" href="contact_me.html">Contact Me</a></li>
+                </span>
+                <div class="mobile_navbar">
+                    <a href="#" id="menu_btn">☰</a>
+                </div>
+                <div id="mobile_menu" class="menu h4">
+                    <li class="nav-btns"><a class="nav-links" href="index.html">My Portfolio</a></li>
+                    <li class="nav-btns"><a class="nav-links" href="about_me.html">About Me</a></li>
+                    <li class="nav-btns"><a class="nav-links active" href="contact_me.html">Contact Me</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <!--SCRIPT FOR POP UP MENU--><script>
+        const menuBtn = document.getElementById("menu_btn");
+        const mobileMenu = document.getElementById("mobile_menu");
+
+        menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("open");
+        });
+
+        document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target)) {
+            mobileMenu.classList.remove("open");
+        }
+        });
+    </script>
+    <main>
+        <section class="contact_grid">
+            <div>
+            <h2>Contact Me</h2>
+            <div class="row p center">
+                <form action="/submit_form" method="POST">
+                    <div class="row">
+                        <div>
+                            <label for="first_name"><span class="red">*</span>First Name:</label>
+                            <input type="text" id="first_name" name="first_name" required>
+                        </div>
+                        <div>
+                            <label for="last_name"><span class="red">*</span>Last Name:</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email"><span class="red">*</span>Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="dropdown"><span class="red">*</span>Reason:</label>
+                        <select id="dropdown" name="dropdown" class="h6" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="option1">Looking to hire</option>
+                            <option value="option2">Looking for pricing</option>
+                            <option value="option3">I have a question</option>
+                            <option value="option4">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" cols="33"></textarea>
+                    </div>
+                    <!--<div>
+                        <label for="resume">
+                            <input type="checkbox" id="resume" name="resume">
+                            Request a copy of Kaylie's r&#233;sum&#233;</label>
+                    </div>-->
+                    <br>
+                    <div class="center">
+                        <button class="form_button h6" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="center form_img">
+            <img id="contact_img" src="imgs/hike.JPG" alt="Contact Me" class="hike">
+        </div>
+        </section>
+    </main>
+    <hr>
+    <footer class="row col-12">
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+    </footer>
+</body>
+</html>

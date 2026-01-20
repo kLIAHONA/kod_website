@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaylie Osmun - about me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ank0bzv.css">
+</head>
+<body>
+    <div class="top-mar"></div>
+    <nav class="nav_color col-12">
+        <div>
+            <ul class="p navbar">
+                <li class="script"><a class="nav-links" href="index.html">Kaylie Osmun</a></li>
+                <span class="nav_menu">
+                <li class="nav-btns"><a class="nav-links " href="index.html">My Portfolio</a></li>
+                <li class="nav-btns"><a class="nav-links active" href="about_me.html">About Me</a></li>
+                <li class="nav-btns"><a class="nav-links" href="contact_me.html">Contact Me</a></li>
+                </span>
+                <div class="mobile_navbar">
+                    <a href="#" id="menu_btn">☰</a>
+                </div>
+                <div id="mobile_menu" class="menu h4">
+                    <li class="nav-btns"><a class="nav-links" href="index.html">My Portfolio</a></li>
+                    <li class="nav-btns"><a class="nav-links active" href="about_me.html">About Me</a></li>
+                    <li class="nav-btns"><a class="nav-links" href="contact_me.html">Contact Me</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <!--SCRIPT FOR POP UP MENU--><script>
+        const menuBtn = document.getElementById("menu_btn");
+        const mobileMenu = document.getElementById("mobile_menu");
+
+        menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("open");
+        });
+
+        document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target)) {
+            mobileMenu.classList.remove("open");
+        }
+        });
+    </script>
+    <header class="black">
+        <ul class="h6">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#design">My Design Journey</a></li>
+            <li><a href="#likes">Like/Dislikes</a></li>
+            <li><a href="#res">R&#233;sum&#233;</a></li>
+        </ul>
+    </header>    
+    <div class="hirebtn h6">
+        <a href="#hireme" id="hiremebtn">Hire Me</a>
+    </div>
+    <div id="popupform" class="popup">
+        <span class="close-btn" id="closepopup">&times;</span>
+        <div class="popup-content">
+            <h2>Hire Me</h2>
+            <form class="h6">
+                <label for="name">Name:<span class="red">*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="company">Company:<span class="red">*</span></label>
+                <input type="text" id="company" name="company" required>
+
+                <label for="position">Position in Company</label>
+                <input type="text" id="position" name="position">
+
+                <label for="email">Email:<span class="red">*</span></label>
+                <input type="email" id="user_email" name="user_email" required>
+
+                <label for="message">Message:<span class="red">*</span></label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="center" id="popup_submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('hiremebtn').addEventListener('click', function() {
+            document.getElementById('popupform').style.display = 'block';
+        });
+        document.getElementById('closepopup').addEventListener('click', function() {
+            document.getElementById('popupform').style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(event) {
+            const popup = document.getElementById('popupform');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
+    <main class="col-12">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="row full">
+                <p class="indent">
+                    My name is Kaylie Osmun and I am 22 years old. I graduated with an Associates Degree in Graphic Design in Spring of 2025. I grew up in
+                    Washington state and Alaska &#40;no, I did not live in an igloo or have a pet polar bear. I wish I was that cool&#41;. I met my-now husband
+                    in May of 2023. We dated for nine months then got married in February of 2024. For Christmas of 2025 we got a doberman puppy and named her Athena.
+                    Since getting married we have lived in Washington, Ohio, and are getting ready to move to Idaho.
+                </p>
+                <div class="half center">
+                    <img class="full" id="hike" src="imgs/hike.JPG" alt="Kaylie, Jacob, and Athena on a winter hike"> <!--carousel-->
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="design">
+            <h2>My Design Journey</h2>
+            <p class="indent">
+                I began my design journey in grade 10 when I began to paint quotes. I was a broke high school student saving up for college, so I painted on 
+                cardboard. I experimented with alignment, fonts, and colors and created quite the stack of paintings. I also got a pair of white tennis shoes
+                that I would paint more intricate things on. In grade 12 I was asked to be the social media manager for a non-profit in my area. My job included
+                creating digital flyers to promote the weekly activities they hosted as well as dates and times for classes and larger activities.
+            </p>
+            <div class="center">
+                <div class="row">
+                    <img class="img_width" src="imgs/stars_quote.JPG" alt="painting that says 'the darkest nights produce the brightest stars'">
+                    <img class="img_width" src="imgs/sunset_pnt.jpg" alt="painting on a shoe of a sunset with a mountain silhouetted in the foreground">
+                </div>
+            </div>
+            <p class="indent">
+                Fast forward a couple years, it's now summer of 2023 and I'm in Edmonton, Alberta, Canada doing volunteer service work. One of my assignments 
+                was tobe on a team of eight people who created graphic ads and videos promoting the lessons we taught. I was only able to be on the team for 
+                five weeks before I was moved to a small town south of Edmonton to teach. During my time on that design team I created a promotional video and 
+                over a dozen graphic ads. I really enjoyed creating these things and that's when I realized I would love to do this as a career. When I got home 
+                that winter I began looking into college courses to get a degree in graphic design. I fast-tracked my degree and finished it in just over a year, 
+                and the rest is history!
+            </p>
+        </section>
+        <hr>
+        <section id="likes">
+            <div class="row flex_center">
+                <div class="p likes top">
+                    <ul><span class="h4">Likes</span>
+                        <li>Sunshine</li>
+                        <li>Backpacking</li>
+                        <li>Lakes, rivers, and mountains</li>
+                        <li>Bacon</li>
+                        <li>Campfires</li>
+                        <li>Ice cream &#40;lactose free&#41;</li>
+                        <li>Climbing trees</li>
+                    </ul>
+                </div>
+                <div class="p likes top">
+                    <ul><span class="h4">Dislikes</span>
+                        <li>Pickles</li>
+                        <li>Slow drivers</li>
+                        <li>Lettuce</li>
+                        <li>Spicy food</li>
+                        <li>Pie &#40;especially pumpkin&#41;</li>
+                        <li>Coffee</li>
+                        <li>Strawberry HiChews</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="res">
+            <h2>My R&#233;sum&#233;</h2>
+            <div class="edu">
+                <h4>Education</h4>
+                <ul class="p text_wrap resume_code">
+                    <li><span class="dot">&#9679;</span> Associates of Science in Graphic Design from Penn Foster College</li>
+                </ul>
+            </div>
+            <div class="row resume_grid">
+                <!--<img src="imgs/resume_green.jpg" alt="my resume">-->
+                <div class="resume_seg">
+                    <h4>Work Experience</h4>
+                    <ul class="p text_wrap resume_code">
+                        <li><span class="dot">&#9679;</span> Housekeeper for White Glove Cleaning &#40;Nov 2025 to current&#41;</li>
+                        <li><span class="dot">&#9679;</span> Server Assistant and Expo Manager at Outback Steakhouse &#40;5 months in 2025&#41;</li>
+                        <li><span class="dot">&#9679;</span> Tour Guide and Sales Rep. for Ketchikan Duck Tours &#40;5 months in 2022&#41;</li>
+                        <li><span class="dot">&#9679;</span> Assistant Daycare Teacher at Rainbow's End Childcare &#40;9 months between 2021-2022&#41;</li>
+                        <li><span class="dot">&#9679;</span> Farmhand at Pyrah's Pioneer Peak Farm &#40;summer of 2019&#41;</li>
+                    </ul>
+                </div>
+                <div class="resume_seg">
+                    <h4>Volunteer Experience</h4>
+                    <ul class="p text_wrap resume_code">
+                        <li><span class="dot">&#9679;</span> Chef, dishwasher, and expeditor at a soup kitchen in Edmonton, Alberta</li>
+                        <li><span class="dot">&#9679;</span> Volunteer English as a Second Language Teacher in Alberta, Canada</li>
+                        <li><span class="dot">&#9679;</span> Social Media Manager for young adult group</li>
+                        <li><span class="dot">&#9679;</span> Volunteer Event Host at Brigham Young University&ndash;Idaho</li>
+                        <li><span class="dot">&#9679;</span> Volunteer Activity Coordinator for a non-profit organization</li>
+                    </ul>
+                </div>
+                <div class="resume_seg">
+                    <h4>Workplace Skills</h4>
+                    <ul class="p text_wrap resume_code">
+                        <li><span class="dot">&#9679;</span> Conflict management and resolution</li>
+                        <li><span class="dot">&#9679;</span> Managing a class or team</li>
+                        <li><span class="dot">&#9679;</span> Public speaking</li>
+                        <li><span class="dot">&#9679;</span> Connecting with clients</li>
+                        <li><span class="dot">&#9679;</span> Sales</li>
+                        <li><span class="dot">&#9679;</span> Managing multiple deadlines</li>
+                        <li><span class="dot">&#9679;</span> Communication</li>
+                        <li><span class="dot">&#9679;</span> Addressing sensitive topics professionally</li>
+                        <li><span class="dot">&#9679;</span> Maintaining long hours, including early morning and late-night shifts</li>
+                    </ul>
+                </div>
+                <div class="resume_seg">
+                    <h4>Design Skills</h4>
+                    <ul class="p text_wrap resume_code">
+                        <li><span class="dot">&#9679;</span> Adobe Illustrator<span class="sup">&#174;</span></li>
+                        <li><span class="dot">&#9679;</span> Adobe Photoshop<span class="sup">&#174;</span></li>
+                        <li><span class="dot">&#9679;</span> Adobe InDesign<span class="sup">&#174;</span></li>
+                        <li><span class="dot">&#9679;</span> Adobe Animate<span class="sup">&#174;</span></li>
+                        <li><span class="dot">&#9679;</span> Adobe Dreamweaver<span class="sup">&#174;</span></li>
+                        <li><span class="dot">&#9679;</span> Visual Studio Code<span class="sup">&#174;</span></li>
+                        <li><span class="dot">&#9679;</span> HTML, CSS, and JavaScript</li>
+                        <li><span class="dot">&#9679;</span> Creating responsive websites</li>
+                        <li><span class="dot">&#9679;</span> Creating letterheads, business cards, and brand identity products</li>
+                        <li><span class="dot">&#9679;</span> Experience with typography and color theory</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <hr>
+    <footer class="row col-12">
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+    </footer>
+</body>
+</html>
