@@ -349,6 +349,9 @@ a {
     color: black;
     padding: 0% 2%;}
 
+.none {
+    list-style: none;}
+
 .this {
     padding: 1px;}
 
@@ -741,12 +744,12 @@ figcaption a:hover {
 
 .client_vs {
     padding: 0px;
-    margin: 1vh auto 1vh 3vw;}
+    margin: 0.5vh auto 0.5vh 3vw;}
 
 .client_text {
     padding: 0px auto;
-    margin-top: 1vh;
-    margin-bottom: 1vh;}
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;}
 
 .carousel_img {
     object-fit: contain;
