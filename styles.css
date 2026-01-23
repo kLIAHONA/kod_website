@@ -744,12 +744,12 @@ figcaption a:hover {
 
 .client_vs {
     padding: 0px;
-    margin: 0.5vh auto 0.5vh 3vw;}
+    margin: 0vh auto 0vh 3vw;}
 
 .client_text {
     padding: 0px auto;
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;}
+    margin-top: 0vh;
+    margin-bottom: 0vh;}
 
 .carousel_img {
     object-fit: contain;
