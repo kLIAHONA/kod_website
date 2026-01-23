@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaylie Osmun - home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ank0bzv.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var imgBox = document.querySelectorAll('#home_sketch, #rough_ss, #develop_ss');
+            for (let i = 0; i < imgBox.length; i++) {
+                imgBox[i].addEventListener('mouseenter', function(hover) {
+                    var imgHeight = this.scrollHeight;
+                    var scrollheight = imgHeight - 300;
+                    hover.target.style.objectPosition = `0px -${scrollheight}px`;
+                });
+
+                imgBox[i].addEventListener('mouseleave', function(hover) {
+                    hover.target.style.objectPosition = '0px 0px';
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="top-mar"></div>
+    <nav class="sage col-12">
+        <div>
+            <ul class="p navbar">
+                <li><a class="nav-links" href="index.html"><img id="ko" src="imgs/ko.png"></a></li>
+                <span class="nav_menu">
+                <li class="nav-btns"><a class="nav-links" href="index.html">My Portfolio</a></li>
+                <li class="nav-btn"><a class="nav-links active" href="process.html">My Process</a></li>
+                <li class="nav-btns"><a class="nav-links" href="about_me.html">About Me</a></li>
+                <!--<li class="nav-btns"><a class="nav-links" href="contact_me.html">Contact Me</a></li>-->
+                </span>
+                <div class="mobile_navbar">
+                    <a href="#" id="menu_btn">☰</a>
+                </div>
+                <div id="mobile_menu" class="menu h4">
+                    <li class="nav-btns"><a class="nav-links" href="index.html">My Portfolio</a></li>
+                    <li class="nav-btn"><a class="nav-links active" href="process.html">My Process</a></li>
+                    <li class="nav-btns"><a class="nav-links" href="about_me.html">About Me</a></li>
+                    <!--<li class="nav-btns"><a class="nav-links" href="contact_me.html">Contact Me</a></li>-->
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <!--SCRIPT FOR POP UP MENU--><script>
+        const menuBtn = document.getElementById("menu_btn");
+        const mobileMenu = document.getElementById("mobile_menu");
+
+        menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("open");
+        });
+
+        document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target)) {
+            mobileMenu.classList.remove("open");
+        }
+        });
+    </script>
+    <header class="black">
+        <ul class="h6">
+            <li><a href="#phase1">Phase 1</a></li>
+            <li><a href="#phase2">Phase 2</a></li>
+            <li><a href="#phase3">Phase 3</a></li>
+            <li><a href="#phase4">Phase 4</a></li>
+        </ul>
+    </header>
+    <!--<div class="hirebtn h6">
+        <a href="#hireme" id="hiremebtn">Hire Me</a>
+    </div>
+    <div id="popupform" class="popup">
+        <span class="close-btn" id="closepopup">&times;</span>
+        <div class="popup-content">
+            <h3>Want to Hire Me?</h3>
+            <form class="h6">
+                <label for="name">Name:<span class="red">*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="company">Company:<span class="red">*</span></label>
+                <input type="text" id="company" name="company" required>
+
+                <label for="position">Position in Company</label>
+                <input type="text" id="position" name="position">
+
+                <label for="email">Email:<span class="red">*</span></label>
+                <input type="email" id="user_email" name="user_email" required>
+
+                <label for="message">Message:<span class="red">*</span></label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="center" id="popup_submit">Submit</button>
+            </form>
+        </div>
+    </div>
+SCRIPT FOR POP UP FORM<script>
+        document.getElementById('hiremebtn').addEventListener('click', function() {
+            document.getElementById('popupform').style.display = 'block';
+        });
+        document.getElementById('closepopup').addEventListener('click', function() {
+            document.getElementById('popupform').style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(event) {
+            const popup = document.getElementById('popupform');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>-->
+    <main class="col-12">
+        <section>
+            <h2>My Process for Designing a Website</h2>
+            <h3 class="sage_box section_target" id="phase1">Phase 1 &ndash; Sketching</h3>
+            <div class="row">
+                <article class="full">
+                    <p class="top pad_l_5 indent">I begin the design process for websites by figuring out how many pages they need.
+                        For this website, I needed three. Next, I design the header, footer, and navigation bar.
+                        After that, it's time to decide what goes on each page. Then I design each section within the pages. I
+                        use an X for images and corner marks to indicate a border or a box. I also make note of what
+                        layout I want to use for each section, such as columns or carousels.
+                    </p>
+                    </br></br>
+                    <p class="pad_l_5 indent">
+                        After I have a layout that I like I flesh out what the text will be and what buttons will look
+                        like and what they will do. Once my client and I are both happy with the sketches, we're ready to move onto the next phase!
+                    </p>
+                </article>
+                <div class="website-box full blk_border scroll height_50">
+                    <div>
+                        <figure>
+                            <div class="box_hint">
+                                <figcaption class="hint"><span class="desktop">hover over image to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
+                            </div>
+                            <img id="home_sketch" class="full" src="imgs/home_sketch.jpg" alt="sketched ideas for a website's homepage layout">
+                        </figure>
+                    </div>
+                </div>                        
+            </div>
+            <br>
+            <h3 class="sage_box section_target" id="phase2">Phase 2 &ndash; Rough Draft</h3>
+            <div class="row process_grid">
+                <div class="website-box ss blk_border scroll">
+                    <div>
+                        <figure>
+                            <div class="box_hint">
+                                <figcaption class="hint"><span class="desktop">hover over image to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
+                            </div>
+                            <img id="rough_ss" src="imgs/rough_ss.jpg" alt="rough draft of a website's homepage layout">
+                        </figure>
+                    </div>
+                </div>
+                <div class="ss_text">
+                    <article>
+                        <p class="top pad_l_5 indent"> I use my details from my sketch to begin making the outlines of the website. I make the header, footer, 
+                            navigation bar, and buttons links. I also link a CSS file to all the pages, which has all my design code. The design code
+                            includes my standard codes for columns, font sizes that change respective to the size of the browser, as well as codes needed for
+                            everything else I put on my website. I like to have one big CSS file for the whole website rather than a separate CSS file for
+                            each HTML page, I think it makes coding easier since I know exactly where everything is.
+                        </p>
+                        </br></br>
+                        <p class="pad_l_5 indent">I insert images as I go, so I know what sizes they are. I work section by section to complete each page, making sure to add in SEO
+                            as I go. By the end of this phase I have a website with images, layouts, and working buttons&#8212;but no colors. Now it's
+                            time to show my clients the rough draft and make any desired changes.
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <h3 class="sage_box section_target" id="phase3">Phase 3 &ndash; Development</h3>
+            <div class="row process_grid">
+                <div class="ss_text">
+                    <article>
+                        <p class="top pad_l_5 indent"> Now that I have a functional website, it's time to add more details! During this stage I add colors, fonts, and more complex codes such as pop-up
+                            windows and scrolling image frames. I work closely with my client's want-list to the find colors and fonts that match their
+                            brand identity. I also refine the layouts and make it responsive, so it works on all browser sizes. By the end of this phase I have the
+                            completed website and it is ready to show to my clients!
+                        </p>
+                    </article>
+                </div>
+                <div class="website-box ss blk_border scroll height_50">
+                    <div>
+                        <figure>
+                            <div class="box_hint">
+                                <figcaption class="hint"><span class="desktop">hover over image to scroll</span><span class="mobile">tap image to scroll</span></figcaption>
+                            </div>
+                            <img id="develop_ss" src="imgs/development_ss.jpg" alt="finished product of a website's homepage">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <h3 class="sage_box section_target" id="phase4">Phase 4 &ndash; Delivery</h3>
+            <div class="row">
+                <article>
+                    <p class="top pad_l_5 indent"> Now it's time to upload the website and set up the site analytics. I monitor the site to make sure everything is
+                        working properly and to make any needed adjustments. Depending on the services in each specific contract, I may also update the website
+                        periodically with new content. Some of the new content I add includes blog posts and seasonal changes.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <hr>
+    <footer class="row col-12 text_wrap">
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+        <div class="col-4 footer-content">
+            <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
+        </div>
+    </footer>
+</body>
+</html>
