@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ank0bzv.css">
 </head>
-
 <body>
     <div class="top-mar"></div>
     <nav class="sage col-12">
@@ -32,21 +31,6 @@
             </ul>
         </div>
     </nav>
-    <!--SCRIPT FOR POP UP MENU--><script>
-        const menuBtn = document.getElementById("menu_btn");
-        const mobileMenu = document.getElementById("mobile_menu");
-
-        menuBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("open");
-        });
-
-        document.addEventListener("click", (e) => {
-        if (!mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove("open");
-        }
-        });
-    </script>
     <header class="black">
         <ul class="h6">
             <li><a href="#about">About Me</a></li>
@@ -81,22 +65,7 @@
                 <button type="submit" class="center" id="popup_submit">Submit</button>
             </form>
         </div>
-    </div>
-    <script>
-        document.getElementById('hiremebtn').addEventListener('click', function() {
-            document.getElementById('popupform').style.display = 'block';
-        });
-        document.getElementById('closepopup').addEventListener('click', function() {
-            document.getElementById('popupform').style.display = 'none';
-        });
-        
-        window.addEventListener('click', function(event) {
-            const popup = document.getElementById('popupform');
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
-    </script>-->
+    </div>-->
     <main class="col-12">
         <section class="section_target" id="about">
             <h2>About Me</h2>
@@ -239,5 +208,36 @@
             <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
         </div>
     </footer>
+<!--POP UP FORM<script>
+    document.getElementById('hiremebtn').addEventListener('click', function() {
+        document.getElementById('popupform').style.display = 'block';
+    });
+    document.getElementById('closepopup').addEventListener('click', function() {
+        document.getElementById('popupform').style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(event) {
+        const popup = document.getElementById('popupform');
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+</script>-->
+<!--MOBILE MENU-->
+<script>
+    const menuBtn = document.getElementById("menu_btn");
+    const mobileMenu = document.getElementById("mobile_menu");
+
+    menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove("open");
+    }
+    });
+</script>
 </body>
 </html>

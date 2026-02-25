@@ -6,22 +6,6 @@
     <title>Kaylie Osmun - home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ank0bzv.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var imgBox = document.querySelectorAll('#home_sketch, #rough_ss, #develop_ss');
-            for (let i = 0; i < imgBox.length; i++) {
-                imgBox[i].addEventListener('mouseenter', function(hover) {
-                    var imgHeight = this.scrollHeight;
-                    var scrollheight = imgHeight - 300;
-                    hover.target.style.objectPosition = `0px -${scrollheight}px`;
-                });
-
-                imgBox[i].addEventListener('mouseleave', function(hover) {
-                    hover.target.style.objectPosition = '0px 0px';
-                });
-            }
-        });
-    </script>
 </head>
 
 <body>
@@ -48,21 +32,6 @@
             </ul>
         </div>
     </nav>
-    <!--SCRIPT FOR POP UP MENU--><script>
-        const menuBtn = document.getElementById("menu_btn");
-        const mobileMenu = document.getElementById("mobile_menu");
-
-        menuBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("open");
-        });
-
-        document.addEventListener("click", (e) => {
-        if (!mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove("open");
-        }
-        });
-    </script>
     <header class="black">
         <ul class="h6">
             <li><a href="#phase1">Phase 1</a></li>
@@ -97,22 +66,7 @@
                 <button type="submit" class="center" id="popup_submit">Submit</button>
             </form>
         </div>
-    </div>
-SCRIPT FOR POP UP FORM<script>
-        document.getElementById('hiremebtn').addEventListener('click', function() {
-            document.getElementById('popupform').style.display = 'block';
-        });
-        document.getElementById('closepopup').addEventListener('click', function() {
-            document.getElementById('popupform').style.display = 'none';
-        });
-        
-        window.addEventListener('click', function(event) {
-            const popup = document.getElementById('popupform');
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
-    </script>-->
+    </div>-->
     <main class="col-12">
         <section>
             <h2>My Process for Designing a Website</h2>
@@ -217,5 +171,54 @@ SCRIPT FOR POP UP FORM<script>
             <h6>&copy; 2023 Kaylie Osmun. All rights reserved.</h6>
         </div>
     </footer>
+<!--POP UP FORM
+<script>
+    document.getElementById('hiremebtn').addEventListener('click', function() {
+        document.getElementById('popupform').style.display = 'block';
+    });
+    document.getElementById('closepopup').addEventListener('click', function() {
+        document.getElementById('popupform').style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(event) {
+        const popup = document.getElementById('popupform');
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+</script>-->
+<!--MOBILE MENU-->
+<script>
+    const menuBtn = document.getElementById("menu_btn");
+    const mobileMenu = document.getElementById("mobile_menu");
+
+    menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove("open");
+    }
+    });
+</script>
+<!--IMAGE SCROLL ON HOVER-->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var imgBox = document.querySelectorAll('#home_sketch, #rough_ss, #develop_ss');
+        for (let i = 0; i < imgBox.length; i++) {
+            imgBox[i].addEventListener('mouseenter', function(hover) {
+                var imgHeight = this.scrollHeight;
+                var scrollheight = imgHeight - 300;
+                hover.target.style.objectPosition = `0px -${scrollheight}px`;
+            });
+
+            imgBox[i].addEventListener('mouseleave', function(hover) {
+                hover.target.style.objectPosition = '0px 0px';
+            });
+        }
+    });
+</script>
 </body>
 </html>

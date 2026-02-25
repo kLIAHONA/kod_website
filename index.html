@@ -32,21 +32,6 @@
             </ul>
         </div>
     </nav>
-    <!--SCRIPT FOR POP UP MENU--><script>
-        const menuBtn = document.getElementById("menu_btn");
-        const mobileMenu = document.getElementById("mobile_menu");
-
-        menuBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("open");
-        });
-
-        document.addEventListener("click", (e) => {
-        if (!mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove("open");
-        }
-        });
-    </script>
     <header class="black">
         <ul class="h6">
             <li><a href="#logos">Logos</a></li>
@@ -82,22 +67,7 @@
                 <button type="submit" class="center" id="popup_submit">Submit</button>
             </form>
         </div>
-    </div>
-SCRIPT FOR POP UP FORM<script>
-        document.getElementById('hiremebtn').addEventListener('click', function() {
-            document.getElementById('popupform').style.display = 'block';
-        });
-        document.getElementById('closepopup').addEventListener('click', function() {
-            document.getElementById('popupform').style.display = 'none';
-        });
-        
-        window.addEventListener('click', function(event) {
-            const popup = document.getElementById('popupform');
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
-    </script>-->
+    </div>-->
     <main class="col-12">
         <section id="welcome">
             <br><br><br><br>
@@ -134,46 +104,6 @@ SCRIPT FOR POP UP FORM<script>
         <section class="section_target" id="clients">
             <h2>Work for Clients</h2>
         </section>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('.carousel').forEach(carousel => {
-                    const items = carousel.querySelectorAll('.carousel_content');
-                    if (!items || items.length === 0) return;
-
-                    const buttonsHtml = Array.from(items, () => '<button type="button" class="carousel_button" aria-label="carousel control"></button>');
-
-                    carousel.insertAdjacentHTML('beforeend', `
-                        <div class="carousel_nav">
-                            ${buttonsHtml.join('')}
-                        </div>
-                    `);
-
-                    const buttons = carousel.querySelectorAll('.carousel_button');
-                    if (!buttons || buttons.length === 0) return;
-                    let currentIndex = 0;
-
-                    const setActive = (index) => {
-                        const i = ((index % items.length) + items.length) % items.length;
-                        items.forEach(item => item.classList.remove('carousel_content-active'));
-                        buttons.forEach(btn => btn.classList.remove('carousel_button-active'));
-                        items[i].classList.add('carousel_content-active');
-                        buttons[i].classList.add('carousel_button-active');
-                        currentIndex = i;
-                    };
-
-                    buttons.forEach((button, i) => {
-                        button.addEventListener('click', () => setActive(i));
-                    });
-
-                    const prevBtn = carousel.querySelector('.prev_btn');
-                    const nextBtn = carousel.querySelector('.next_btn');
-                    if (prevBtn) prevBtn.addEventListener('click', () => setActive(currentIndex - 1));
-                    if (nextBtn) nextBtn.addEventListener('click', () => setActive(currentIndex + 1));
-
-                    setActive(0);
-                });
-            });
-        </script>
         <div class="carousel">
             <div class="carousel_content">
                 <div class="row flex">
@@ -243,31 +173,6 @@ SCRIPT FOR POP UP FORM<script>
             <button class="carousel_btn prev_btn p"><div id="prev_btn"><span id="center">&#60</span></div></button>
             <button class="carousel_btn next_btn p"><div id="next_btn"><span id="center">&#62</span></div></button>
         </div>
-        <script>
-            const nextImg = document.getElementById('next_btn');
-            const prevImg = document.getElementById('prev_btn');
-            
-            const nextButton = nextImg ? nextImg.closest('.carousel_btn') || nextImg.parentElement : null;
-            const prevButton = prevImg ? prevImg.closest('.carousel_btn') || prevImg.parentElement : null;
-            
-            function addPressed(el) { if (el) el.classList.add('pressed'); }
-            function removePressed(el) { if (el) el.classList.remove('pressed'); }
-            
-            function attachPressListeners(el) {
-                if (!el) return;
-                
-                el.addEventListener('pointerdown', () => addPressed(el));
-                el.addEventListener('pointerup', () => removePressed(el));
-                el.addEventListener('pointercancel', () => removePressed(el));
-                el.addEventListener('pointerleave', () => removePressed(el));
-                
-                el.addEventListener('touchstart', () => addPressed(el), {passive: true});
-                el.addEventListener('touchend', () => removePressed(el));
-            }
-            
-            attachPressListeners(nextButton);
-            attachPressListeners(prevButton);
-        </script>
         <hr>
         <section class="section_target" id="code">
             <h2>Code Snippets</h2>
@@ -422,5 +327,97 @@ SCRIPT FOR POP UP FORM<script>
             <h6>&copy; 2026 Kaylie Osmun. All rights reserved.</h6>
         </div>
     </footer>
+<!--POP UP FORM-->
+<script>
+    document.getElementById('hiremebtn').addEventListener('click', function() {
+        document.getElementById('popupform').style.display = 'block';
+    });
+    document.getElementById('closepopup').addEventListener('click', function() {
+        document.getElementById('popupform').style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(event) {
+        const popup = document.getElementById('popupform');
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+</script>-->
+<!--MOBILE MENU-->
+<script>
+    const menuBtn = document.getElementById("menu_btn");
+    const mobileMenu = document.getElementById("mobile_menu");
+
+    menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove("open");
+    }
+    });
+</script>
+<!--BTN RETURN TO REGULAR AFTER RELEASE-->
+<script>
+    const nextImg = document.getElementById('next_btn');
+    const prevImg = document.getElementById('prev_btn');
+    
+    const nextButton = nextImg ? nextImg.closest('.carousel_btn') || nextImg.parentElement : null;
+    const prevButton = prevImg ? prevImg.closest('.carousel_btn') || prevImg.parentElement : null;
+    
+    function addPressed(el) { if (el) el.classList.add('pressed'); }
+    function removePressed(el) { if (el) el.classList.remove('pressed'); }
+    
+    function attachPressListeners(el) {
+        if (!el) return;
+        
+        el.addEventListener('pointerdown', () => addPressed(el));
+        el.addEventListener('pointerup', () => removePressed(el));
+        el.addEventListener('pointercancel', () => removePressed(el));
+        el.addEventListener('pointerleave', () => removePressed(el));
+        
+        el.addEventListener('touchstart', () => addPressed(el), {passive: true});
+        el.addEventListener('touchend', () => removePressed(el));
+    }
+    
+    attachPressListeners(nextButton);
+    attachPressListeners(prevButton);
+</script>
+<!--CAROUSEL NEXT/PREV BTNS-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const items = carousel.querySelectorAll('.carousel_content');
+            if (!items || items.length === 0) return
+            const buttonsHtml = Array.from(items, () => '<button type="button" class="carousel_button" aria-label="carousel control"></button>')
+            carousel.insertAdjacentHTML('beforeend', `
+                <div class="carousel_nav">
+                    ${buttonsHtml.join('')}
+                </div>
+            `)
+            const buttons = carousel.querySelectorAll('.carousel_button');
+            if (!buttons || buttons.length === 0) return;
+            let currentIndex = 0
+            const setActive = (index) => {
+                const i = ((index % items.length) + items.length) % items.length;
+                items.forEach(item => item.classList.remove('carousel_content-active'));
+                buttons.forEach(btn => btn.classList.remove('carousel_button-active'));
+                items[i].classList.add('carousel_content-active');
+                buttons[i].classList.add('carousel_button-active');
+                currentIndex = i;
+            }
+            buttons.forEach((button, i) => {
+                button.addEventListener('click', () => setActive(i));
+            })
+            const prevBtn = carousel.querySelector('.prev_btn');
+            const nextBtn = carousel.querySelector('.next_btn');
+            if (prevBtn) prevBtn.addEventListener('click', () => setActive(currentIndex - 1));
+            if (nextBtn) nextBtn.addEventListener('click', () => setActive(currentIndex + 1))
+            setActive(0);
+        });
+    });
+</script>
 </body>
 </html>
