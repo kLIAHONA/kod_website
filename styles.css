@@ -562,6 +562,11 @@ hr {
     grid-template-columns: repeat(3, 1fr);
     gap: 1vw;}
 
+.websites_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;}
+
 
 
 
@@ -639,6 +644,10 @@ hr {
 
 img {
     object-fit: contain;}
+
+.web_imgs {
+    width: 40vw;
+    height: auto;}
 
 .form_img {
     margin-right: 0px;
