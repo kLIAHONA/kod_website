@@ -649,6 +649,9 @@ img {
     width: 40vw;
     height: auto;}
 
+.web_imgs:hover {
+    transform: scale(1.2);}
+
 .form_img {
     margin-right: 0px;
     margin-left: auto;}
