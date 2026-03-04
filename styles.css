@@ -647,7 +647,8 @@ img {
 
 .web_imgs {
     width: 40vw;
-    height: auto;}
+    height: auto;
+    border: 1px solid #1f2929;}
 
 .web_imgs:hover {
     transform: scale(1.2);}
